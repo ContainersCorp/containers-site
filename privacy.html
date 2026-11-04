@@ -10,7 +10,7 @@
 <header><strong>컨테이너스 주식회사</strong><nav><a href="index.html">소개</a><a href="privacy.html">개인정보처리방침</a><a href="terms.html">이용약관</a><a href="data-deletion.html">데이터 삭제</a></nav></header>
 <main>
 <h1>개인정보처리방침</h1>
-<p class="meta">시행일: 2026년 10월 29일 · 서비스: Meta Ads Dashboard · 운영: 컨테이너스 주식회사</p>
+<p class="meta">시행일: 2026년 11월 4일 (최초 시행 2026년 10월 29일) · 서비스: Meta Ads Dashboard · 운영: 컨테이너스 주식회사</p>
 
 <p>컨테이너스 주식회사(이하 "회사")는 Meta Ads Dashboard(이하 "서비스")를 운영하며, 서비스를 통해 처리하는 정보를 아래와 같이 안내합니다.</p>
 
@@ -22,7 +22,7 @@
 <li><b>광고 계정 정보</b>: 광고 계정 이름·ID·통화·시간대</li>
 <li><b>광고 구조와 설정</b>: 캠페인, 광고 세트, 광고의 이름·ID·게재 상태·일예산·입찰 설정·타겟 설정</li>
 <li><b>광고 성과 지표</b>: 지출, 노출, 클릭, 결과 수(예: 가입·문의), 결과당 비용 등 집계된 수치</li>
-<li><b>광고 세팅 시 업로드하는 파일</b>: 광고에 사용할 이미지·영상과 문구(일시적으로 처리되며 Meta로 전송)</li>
+<li><b>광고 세팅 시 업로드하는 파일</b>: 광고에 사용할 이미지·영상과 문구(Meta로 전송하는 동안만 임시로 처리)</li>
 <li><b>접근 토큰</b>: Meta API 호출에 사용하는 액세스 토큰</li>
 <li><b>서비스 사용 기록</b>: 서비스에서 수행한 상태·예산 변경의 시각, 대상, 이전 값과 새 값</li>
 </ul>
@@ -38,49 +38,79 @@
 
 <h2>4. 보관 위치와 보관 기간</h2>
 <ul>
-<li>성과 데이터와 변경 기록은 회사가 관리하는 기기·서버의 데이터베이스에 저장됩니다.</li>
-<li>액세스 토큰은 서버 설정(환경 변수 또는 설정 파일)에만 저장되며 외부에 공개되지 않습니다.</li>
-<li>광고주와의 업무 관계가 이어지는 동안 보관하며, 광고주가 접근 권한을 철회하거나 삭제를 요청하면 지체 없이 삭제합니다. (<a href="data-deletion.html">데이터 삭제 안내</a>)</li>
+<li><b>보관 위치</b>: 성과 데이터와 변경 기록은 회사가 관리하는 PC의 데이터베이스 파일에 저장됩니다. 같은 PC에 하루 한 번 백업본이 만들어지며 최근 14일치만 남기고 지웁니다.</li>
+<li><b>접근 토큰</b>: 서버 설정 파일에만 저장되며 외부에 공개되지 않습니다.</li>
+<li><b>업로드 파일</b>: 광고용 이미지·영상은 Meta로 전송하는 동안만 임시로 두고, 전송이 끝나면(실패해도) 바로 지웁니다.</li>
+<li><b>성과 데이터·변경 기록·이용자 정보</b>: 광고주와의 업무 관계가 이어지는 동안 보관합니다. 광고주가 접근 권한을 철회하거나 삭제를 요청하면 영업일 기준 <b>7일 이내</b>에 삭제하고 결과를 알려 드립니다. 백업본은 위 14일이 지나면 함께 사라집니다. (<a href="data-deletion.html">데이터 삭제 안내</a>)</li>
 </ul>
 
 <h2>5. 제3자 제공 및 위탁</h2>
 <p>회사는 광고 계정 데이터를 판매하지 않으며 제3자에게 제공하지 않습니다. 다만 서비스는 기능 수행을 위해 다음과 같이 데이터를 주고받습니다.</p>
 <ul>
 <li><b>Meta Platforms</b>: 광고 데이터 조회 및 광고 변경 요청</li>
-<li><b>Google(Google Sheets / Apps Script)</b>: 일부 광고주의 월 예산표와 연동하는 경우, 지점별 예산 수치를 시트와 주고받음</li>
+<li><b>Google(Google Sheets / Apps Script)</b>: 일부 광고주의 월 예산표와 연동하는 경우, 지점별 예산 수치를 시트와 주고받음 (그 외 광고 데이터는 보내지 않음)</li>
+<li><b>Google(로그인)</b>: 서비스에 접속하는 임직원·담당자가 구글 계정으로 로그인할 때 이메일 주소를 확인</li>
+<li><b>Cloudflare</b>: 서비스 접속 주소 연결과 접속 허가 확인(이용자의 접속 정보가 Cloudflare를 거쳐 전달됨)</li>
 </ul>
 <p>법령에 따라 요구되는 경우를 제외하고는 위 목적 외로 정보를 공유하지 않습니다.</p>
 
-<h2>6. 보호 조치</h2>
+<h2>6. 개인정보의 국외 이전</h2>
+<p>서비스 기능을 위해 아래와 같이 정보가 해외 사업자에게 전송됩니다. 이전을 원하지 않으시면 서비스 이용(접근 권한 승인)을 하지 않으셔야 하며, 이미 승인하셨다면 접근 권한을 철회해 주세요.</p>
+<ul>
+<li><b>받는 자</b>: Meta Platforms, Inc. / Google LLC / Cloudflare, Inc. (본사 소재지: 미국, 정보는 각 사의 해외 서버에 처리·저장될 수 있음)</li>
+<li><b>이전 항목</b>: 광고 계정·캠페인·성과 데이터와 광고 설정(Meta), 예산 수치(Google 시트 연동 시), 서비스 이용자의 이메일 주소와 접속 정보(Google·Cloudflare)</li>
+<li><b>이전 시기와 방법</b>: 서비스를 이용하는 때마다 암호화된 인터넷 통신(HTTPS)으로 전송</li>
+<li><b>이전 목적</b>: 광고 조회·관리, 로그인 확인, 접속 연결</li>
+<li><b>보유·이용 기간</b>: 각 사의 정책에 따르며, 회사는 위 4항의 기간에 맞춰 회사가 보관하는 정보를 삭제합니다.</li>
+</ul>
+
+<h2>7. 보호 조치</h2>
 <ul>
 <li>접근 토큰과 비밀키는 코드 저장소에 포함하지 않고 별도 설정으로만 관리합니다.</li>
-<li>서비스는 허가된 임직원만 접근할 수 있도록 운영합니다.</li>
+<li>서비스는 허가된 임직원·담당자만 구글 로그인으로 접근할 수 있도록 운영하며, 담당자는 자기에게 맡겨진 광고 계정만 볼 수 있습니다.</li>
 <li>필요한 최소한의 권한만 사용합니다.</li>
 </ul>
 
-<h2>7. 이용자의 권리</h2>
-<p>광고주 및 정보 주체는 언제든지 자신의 정보에 대한 열람, 정정, 삭제를 요청할 수 있으며, Meta 계정 설정에서 서비스의 접근 권한을 직접 철회할 수도 있습니다. 요청은 아래 문의처로 보내 주세요.</p>
+<h2>8. 이용자의 권리</h2>
+<p>광고주 및 정보 주체는 언제든지 자신의 정보에 대한 열람, 정정, 삭제를 요청할 수 있으며, Meta 계정 설정에서 서비스의 접근 권한을 직접 철회할 수도 있습니다. 요청은 아래 문의처로 보내 주세요. 요청을 확인한 뒤 영업일 기준 7일 이내에 처리하고 결과를 알려 드립니다.</p>
 
-<h2>8. 방침의 변경</h2>
+<h2>9. 권리 침해 시 도움 받을 수 있는 곳</h2>
+<p>개인정보 침해로 도움이 필요하시면 아래 기관에 상담이나 신고를 하실 수 있습니다.</p>
+<ul>
+<li>개인정보침해신고센터: privacy.kisa.or.kr / 국번 없이 118</li>
+<li>개인정보분쟁조정위원회: kopico.go.kr / 1833-6972</li>
+<li>대검찰청 사이버수사과: spo.go.kr / 국번 없이 1301</li>
+<li>경찰청 사이버범죄 신고시스템: ecrm.police.go.kr / 국번 없이 182</li>
+</ul>
+
+<h2>10. 방침의 변경</h2>
 <p>이 방침이 바뀌면 이 페이지에 변경 내용과 시행일을 게시합니다.</p>
+<ul>
+<li>2026년 11월 4일: 보관 위치와 기간, 삭제 처리 기한(영업일 7일), 국외 이전, 이용자 로그인 정보, 권리 침해 시 도움 받을 수 있는 곳을 추가했습니다.</li>
+<li>2026년 10월 29일: 최초 시행</li>
+</ul>
 
-<h2>9. 문의처</h2>
-<p>컨테이너스 주식회사<br>이메일: <a href="mailto:containers.main@gmail.com">containers.main@gmail.com</a></p>
+<h2>11. 문의처</h2>
+<p>컨테이너스 주식회사 개인정보 문의<br>이메일: <a href="mailto:containers.main@gmail.com">containers.main@gmail.com</a></p>
 
 <section class="en" lang="en">
 <h1>Privacy Policy</h1>
-<p class="meta">Effective: October 29, 2026 · Service: Meta Ads Dashboard · Operator: Containers Corp. (컨테이너스 주식회사)</p>
+<p class="meta">Effective: November 4, 2026 (first effective October 29, 2026) · Service: Meta Ads Dashboard · Operator: Containers Corp. (컨테이너스 주식회사)</p>
 <h2>What we process</h2>
-<p>Meta Ads Dashboard is an internal tool that uses the Meta Marketing API to read and manage ad accounts that the account owners have authorized us to access. We process: ad account information (name, ID, currency, time zone); campaign, ad set and ad structure and settings (names, IDs, status, daily budgets, bidding and targeting settings); aggregated performance metrics (spend, impressions, clicks, results, cost per result); creative files and copy that staff upload when creating ads; the Meta access token; and a log of changes made through the tool (time, object, previous and new value).</p>
+<p>Meta Ads Dashboard is an internal tool that uses the Meta Marketing API to read and manage ad accounts that the account owners have authorized us to access. We process: ad account information (name, ID, currency, time zone); campaign, ad set and ad structure and settings (names, IDs, status, daily budgets, bidding and targeting settings); aggregated performance metrics (spend, impressions, clicks, results, cost per result); creative files and copy that staff upload when creating ads; the Meta access token; and a log of changes made through the tool (time, object, previous and new value); and, for staff who sign in, their Google sign-in email address, permissions, assigned ad accounts and screen settings.</p>
 <p>We do <b>not</b> collect personally identifiable information about people who see or interact with the ads. For ads that use instant forms we only list form names and IDs; we do not read or store the personal data submitted through those forms.</p>
 <h2>How we use it</h2>
 <p>Only to display and analyze ad performance, to carry out changes the advertiser asked for (turning ads on or off, changing daily budgets, adding new ads in a paused state), and to keep an audit log. We do not use ad account data to identify, track or profile individuals.</p>
 <h2>Storage and retention</h2>
-<p>Data is stored in databases on devices or servers managed by Containers Corp. Access tokens are kept only in server configuration. We keep data while the business relationship with the advertiser continues, and delete it without undue delay when the advertiser revokes access or asks us to delete it.</p>
-<h2>Sharing</h2>
-<p>We do not sell ad account data or share it with third parties. The tool exchanges data with Meta Platforms (to read data and send change requests) and, for some advertisers, with Google Sheets / Apps Script (budget figures for a monthly budget sheet).</p>
+<p>Ad performance data and the change log are stored in a database file on a PC managed by Containers Corp. A backup copy is made once a day on the same PC and only the last 14 days are kept. Access tokens are kept only in server configuration. Creative files that staff upload are held only while they are being sent to Meta and are deleted right after (also when the upload fails). We keep the other data while the business relationship with the advertiser continues, and delete it within 7 business days when the advertiser revokes access or asks us to delete it.</p>
+<h2>Sharing and international transfers</h2>
+<p>We do not sell ad account data or share it with third parties. To work, the tool sends data to Meta Platforms, Inc. (reading data and sending change requests), to Google LLC (budget figures for a monthly budget sheet, for some advertisers; and sign-in with a Google account to confirm staff email addresses) and to Cloudflare, Inc. (connecting the service address and checking who may enter). These companies are based in the United States and may process data on servers outside Korea. Data is sent over encrypted connections (HTTPS) each time the service is used.</p>
+<h2>Security</h2>
+<p>Access tokens and secrets are kept out of the code repository and stored only in configuration. Only authorized staff can sign in with Google, and each staff member sees only the ad accounts assigned to them. We use only the permissions we need.</p>
 <h2>Your rights and contact</h2>
-<p>You may request access, correction or deletion of your data at any time, or revoke the app's access in your Meta account settings. See our <a href="data-deletion.html">data deletion instructions</a>. Contact: <a href="mailto:containers.main@gmail.com">containers.main@gmail.com</a></p>
+<p>You may request access, correction or deletion of your data at any time, or revoke the app's access in your Meta account settings. We handle requests within 7 business days. See our <a href="data-deletion.html">data deletion instructions</a>. Contact: <a href="mailto:containers.main@gmail.com">containers.main@gmail.com</a></p>
+<h2>Changes</h2>
+<p>If this policy changes, we will post the changes and the effective date on this page. Updated November 4, 2026 (first effective October 29, 2026).</p>
 </section>
 </main>
 <footer>© 2026 컨테이너스 주식회사 (Containers Corp.)</footer>
